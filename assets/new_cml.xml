@@ -24,8 +24,9 @@
 
         <geom name="right_clavicle" type="capsule" fromto="-0.0060125 -0.0457775 0.2287955 -0.016835 -0.128177 0.2376182" size=".045" density="1100"/>
         <geom name="left_clavicle" type="capsule" fromto="-0.0060125 0.0457775 0.2287955 -0.016835 0.128177 0.2376182" size=".045" density="1100"/>
-
+        
         <body name="head" pos="0 0 0.223894">
+          <inertial diaginertia="1e-05 1e-05 1e-05" pos="0 0 0" mass="2.0"/>
           <joint name="neck_x" axis="1 0 0" range="-50 50" stiffness="50" damping="5" armature=".017"/>
           <joint name="neck_y" axis="0 1 0" range="-40 60" stiffness="50" damping="5" armature=".017"/>
           <joint name="neck_z" axis="0 0 1" range="-45 45" stiffness="50" damping="5" armature=".017"/>
