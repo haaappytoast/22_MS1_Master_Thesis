@@ -1,5 +1,3 @@
-![BLOCK_TEST_R2](https://github.com/haaappytoast/22_MS1_Master_Thesis/assets/45995611/51000ca6-6dc9-4f70-b400-84df9e7b93ca)# 22_MS1_Master_Thesis
-
 
 ## Contributions
 The contributions of this work are as follow: 
@@ -20,9 +18,9 @@ The contributions of this work are as follow:
   <br>
   <em>(Top) Motion sequences of the VR user performing punch motion with direction control. (Bottom) Reconstructed full-body motion of the 3D avatar.</em>
 </p>
-
+<br/>
 <p align="center">
-  <img src="">
+  <img src="https://github.com/haaappytoast/22_MS1_Master_Thesis/assets/45995611/72c09f6a-9038-4363-a736-0507f6851825.gif" width="720" height="480">
   <br>
   <em>Blocking a projectile</em>
 </p>
