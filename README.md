@@ -1,6 +1,7 @@
 # 22_MS1_Master_Thesis
 
 
+## Contributions
 The contributions of this work are as follow: 
 1. Enables a VR user with limited lower-body mobility to control full-body movement of a physics-based 3D avatar
 2. Introduces sparse sensor input reward to realistically control upper body movements of a 3D avatar
