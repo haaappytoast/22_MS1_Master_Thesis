@@ -1,0 +1,63 @@
+motions:
+#! outblock
+- file: block_MIXAMO/cml@outblock (1).npy
+  weight: null
+- file: block_MIXAMO/cml@outblock (1)_reverse.npy
+  weight: null
+- file: block_MIXAMO/cml@outblock (2).npy
+  weight: null
+- file: block_MIXAMO/cml@outblock (2)_reverse.npy
+  weight: null
+- file: block_MIXAMO/cml@outblock (3).npy
+  weight: null
+- file: block_MIXAMO/cml@outblock (3)_reverse.npy
+  weight: null
+- file: block_MIXAMO/cml@outblock (4).npy
+  weight: null
+- file: block_MIXAMO/cml@outblock (4)_reverse.npy
+  weight: null
+- file: block_MIXAMO/cml@outblock (5).npy
+  weight: null
+- file: block_MIXAMO/cml@outblock (6).npy
+  weight: null
+- file: block_MIXAMO/cml@outblock (6)_reverse.npy
+  weight: null
+- file: block_MIXAMO/cml@outblock (7).npy
+  weight: null
+- file: block_MIXAMO/cml@outblock (7)_reverse.npy
+  weight: null
+#! idelblock
+- file: block_MIXAMO/cml@idleblock (1).npy
+  weight: null
+- file: block_MIXAMO/cml@idleblock (2).npy
+  weight: null
+- file: block_MIXAMO/cml@idleblock (3).npy
+  weight: null
+- file: block_MIXAMO/cml@idleblock (4).npy
+  weight: null
+
+#! inwardblock
+- file: block_MIXAMO/cml@inwardblock (0).npy
+  weight: null
+- file: block_MIXAMO/cml@inwardblock (0)_reverse.npy
+  weight: null
+- file: block_MIXAMO/cml@inwardblock (2).npy
+  weight: null
+- file: block_MIXAMO/cml@inwardblock (2)_reverse.npy
+  weight: null
+- file: block_MIXAMO/cml@inwardblock (0).npy
+  weight: null
+- file: block_MIXAMO/cml@inwardblock (0)_reverse.npy
+  weight: null
+- file: block_MIXAMO/cml@inwardblock (2).npy
+  weight: null
+- file: block_MIXAMO/cml@inwardblock (2)_reverse.npy
+  weight: null
+- file: block_MIXAMO/cml@inwardblock (4).npy
+  weight: null
+- file: block_MIXAMO/cml@inwardblock (4)_reverse.npy
+  weight: null
+- file: block_MIXAMO/cml@inwardblock (6).npy
+  weight: null
+- file: block_MIXAMO/cml@inwardblock (6)_reverse.npy
+  weight: null

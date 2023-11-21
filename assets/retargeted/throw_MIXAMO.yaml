@@ -1,0 +1,14 @@
+motions:
+#! MIX
+- file: throw_MIXAMO/cml@Frisbee Throw (2).npy
+  weight: null
+- file: throw_MIXAMO/cml@Frisbee Throw (3).npy
+  weight: null
+- file: throw_MIXAMO/cml@Throw Object.npy
+  weight: null
+- file: throw_MIXAMO/cml@Throw Object (1).npy
+  weight: null
+- file: throw_MIXAMO/cml@Throwing.npy
+  weight: null
+- file: throw_MIXAMO/cml@Throwing (1).npy
+  weight: null

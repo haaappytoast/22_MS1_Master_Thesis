@@ -1,0 +1,18 @@
+motions:
+##### mixamo motion #####
+- file: punch_MIXIAMO/CML@Combo Punch (2).npy
+  weight: null
+- file: punch_MIXIAMO/CML@Combo Punch (3).npy
+  weight: null
+- file: punch_MIXIAMO/CML@Combo Punch (4).npy
+  weight: null
+- file: punch_MIXIAMO/CML@Combo Punch (5).npy
+  weight: null
+- file: punch_MIXIAMO/CML@Punching Bag (2).npy
+  weight: null
+- file: punch_MIXIAMO/CML@Punching Bag (3).npy
+  weight: null
+- file: punch_MIXIAMO/CML@Punching Bag (4).npy
+  weight: null
+- file: punch_MIXIAMO/CML@Punching Bag (5).npy # (4) mirrored
+  weight: null

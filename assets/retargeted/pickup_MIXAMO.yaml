@@ -1,0 +1,24 @@
+motions:
+  #! MIX pick objects
+- file: pickup_MIXAMO/cml@Picking Up Object.npy
+  weight: null
+- file: pickup_MIXAMO/cml@Picking Up Object_mirrored.npy
+  weight: null
+- file: pickup_MIXAMO/cml@Picking Up Object (1).npy
+  weight: null
+- file: pickup_MIXAMO/cml@Picking Up Object (1)_mirrored.npy
+  weight: null
+- file: pickup_MIXAMO/cml@Picking Up Object (2).npy
+  weight: null
+- file: pickup_MIXAMO/cml@Picking Up Object (2)_mirrored.npy
+  weight: null
+
+  #! MIX pick fruits
+- file: pickup_MIXAMO/cml@PickFruit_1.npy
+  weight: null
+- file: pickup_MIXAMO/cml@PickFruit_2.npy
+  weight: null
+- file: pickup_MIXAMO/cml@PickFruit_1_mirrored.npy
+  weight: null
+- file: pickup_MIXAMO/cml@PickFruit_2_mirrored.npy
+  weight: null  
