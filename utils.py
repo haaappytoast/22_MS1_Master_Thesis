@@ -1,5 +1,6 @@
 from typing import Tuple
 import torch
+import torch.nn.functional as F
 
 
 @torch.jit.script
@@ -16,7 +17,7 @@ def rotatepoint(q: torch.Tensor, v: torch.Tensor) -> torch.Tensor:
 @torch.jit.script
 def heading_zup(q: torch.Tensor) -> torch.Tensor:
     ref_dir = torch.zeros_like(q[...,:3])
-    ref_dir[..., 0] = 1
+    ref_dir[..., 0] = 1                         # x-dir
     ref_dir = rotatepoint(q, ref_dir)
     return torch.atan2(ref_dir[...,1], ref_dir[...,0])
 
@@ -101,7 +102,7 @@ def slerp(q0, q1, frac):
 
     c = c.abs_()
     s = torch.sqrt(1.0 - c*c)
-    t = torch.acos(c);
+    t = torch.acos(c)
 
     c1 = torch.sin((1-frac)*t) / s
     c2 = torch.sin(frac*t) / s
@@ -115,3 +116,70 @@ def slerp(q0, q1, frac):
     q = torch.where(s < 0.001, 0.5*q0+0.5*q1, q)
     q = torch.where(c >= 1, q0, q)
     return q
+
+
+@torch.jit.script
+def quat_conjugate(x):
+    """
+    quaternion with its imaginary part negated
+    """
+    return torch.cat([-x[..., :3], x[..., 3:]], dim=-1)
+
+@torch.jit.script
+def quat_inverse(x):
+    """
+    The inverse of the rotation
+    """
+    return quat_conjugate(x)
+
+@torch.jit.script
+def quat_rotate(q, v):
+    shape = q.shape
+    q_w = q[:, -1]
+    q_vec = q[:, :3]
+    a = v * (2.0 * q_w ** 2 - 1.0).unsqueeze(-1)
+    b = torch.cross(q_vec, v, dim=-1) * q_w.unsqueeze(-1) * 2.0
+    c = q_vec * \
+        torch.bmm(q_vec.view(shape[0], 1, 3), v.view(
+            shape[0], 3, 1)).squeeze(-1) * 2.0
+    return a + b + c
+
+@torch.jit.script
+def quat_to_tan_norm(q):
+    # type: (Tensor) -> Tensor
+    # represents a rotation using the tangent and normal vectors
+    ref_tan = torch.zeros_like(q[..., 0:3])
+    ref_tan[..., 0] = 1                         # x-dir
+    tan = quat_rotate(q, ref_tan)
+    
+    ref_norm = torch.zeros_like(q[..., 0:3])
+    ref_norm[..., -1] = 1                       # z-dir
+    norm = quat_rotate(q, ref_norm)
+    
+    norm_tan = torch.cat([tan, norm], dim=len(tan.shape) - 1)
+    return norm_tan
+
+@torch.jit.script
+def tan_norm_to_rotmat(norm_tan):
+    # type: (Tensor) -> Tensor
+    tan = F.normalize(norm_tan[..., 0:3])
+    norm = F.normalize(norm_tan[..., 3:6])
+    binorm = F.normalize(torch.cross(norm_tan[..., 3:6], norm_tan[..., 0:3], dim= -1), dim=-1)
+    
+    rot_mat = torch.cat([tan, binorm, norm], dim = len(tan.shape)-1)
+    return rot_mat
+
+@torch.jit.script
+def calc_heading_quat(q):
+    # type: (Tensor) -> Tensor
+    # calculate heading rotation from quaternion
+    # the heading is the direction on the xy plane
+    # q must be normalized
+    heading = heading_zup(q)
+    axis = torch.zeros_like(q[..., 0:3])
+    axis[..., 2] = 1
+    heading_q = axang2quat(axis, heading)
+    return heading_q
+
+def to_torch(x, dtype=torch.float, device='cuda:0', requires_grad=False):
+    return torch.tensor(x, dtype=dtype, device=device, requires_grad=requires_grad)
