@@ -20,7 +20,7 @@ The contributions of this work are as follow:
 </p>
 <br/>
 <p align="center">
-  <img src="https://github.com/haaappytoast/22_MS1_Master_Thesis/assets/45995611/72c09f6a-9038-4363-a736-0507f6851825.gif" width="720" height="480">
+  <img src="https://github.com/haaappytoast/22_MS1_Master_Thesis/assets/45995611/72c09f6a-9038-4363-a736-0507f6851825.gif" width="600" height="360">
   <br>
   <em>Blocking a projectile</em>
 </p>
@@ -51,7 +51,7 @@ The contributions of this work are as follow:
 <br/> 
 
 <p align="center">
-  <img src="https://github.com/haaappytoast/22_MS1_Master_Thesis/assets/45995611/3029a592-7761-41b6-b4c0-f25ac4d42abb" width="600" height="250">
+  <img src="https://github.com/haaappytoast/22_MS1_Master_Thesis/assets/45995611/3029a592-7761-41b6-b4c0-f25ac4d42abb" width="480" height="190">
   <br>
   <em> Example demo of tennis motion retargeted to our model</em>
 </p>
