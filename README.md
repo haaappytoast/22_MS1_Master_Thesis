@@ -1,11 +1,13 @@
-# 22_MS1_Master_Thesis
+![BLOCK_TEST_R2](https://github.com/haaappytoast/22_MS1_Master_Thesis/assets/45995611/51000ca6-6dc9-4f70-b400-84df9e7b93ca)# 22_MS1_Master_Thesis
 
 
 ## Contributions
 The contributions of this work are as follow: 
 1. Enables a VR user with limited lower-body mobility to control full-body movement of a physics-based 3D avatar
 2. Introduces sparse sensor input reward to realistically control upper body movements of a 3D avatar
-<br/><br/><br/>
+<br/>
+
+## Results and Applications
 
 <p align="center">
   <img src="https://github.com/haaappytoast/22_MS1_Master_Thesis/assets/45995611/7f4fe98e-7cc2-4608-b7fe-39d40fde4d2c">
@@ -19,6 +21,11 @@ The contributions of this work are as follow:
   <em>(Top) Motion sequences of the VR user performing punch motion with direction control. (Bottom) Reconstructed full-body motion of the 3D avatar.</em>
 </p>
 
+<p align="center">
+  <img src="">
+  <br>
+  <em>Blocking a projectile</em>
+</p>
 
 <br/><br/><br/>
 
@@ -73,6 +80,5 @@ python main.py <configure_file> --ckpt <checkpoint_dir> --test
 ```
 python main.py config/punch_joystick.py --ckpt 1121_punch_MIX/ckpt-20000 --test
 ```
-
 
 
