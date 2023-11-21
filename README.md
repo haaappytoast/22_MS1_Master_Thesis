@@ -28,10 +28,3 @@ The contributions of this work are as follow:
   * Link: [Github](https://github.com/xupei0610/CompositeMotion)
   
 ----------
-
-
- <img src="./README/img/demo4.jpg" width="480" height="480">
- <img src="./README/img/demo5.jpg" width="480" height="480">
-</p>
-
-
