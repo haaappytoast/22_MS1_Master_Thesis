@@ -1,6 +1,4 @@
-![Punch_Application (1)](https://github.com/haaappytoast/23_MS2_Master_Thesis/assets/45995611/f7b129a8-4fa9-4757-9dcd-85127c2e4ef8)
-https://github.com/haaappytoast/23_MS2_Master_Thesis/assets/45995611/4d12128e-8a7b-4f69-9e4a-ee88891d9669
-Physics-based 3D Avatar Full-Body Motion Control from Sparse Data and Direction Control using Deep Reinforcement Learning
+# Physics-based 3D Avatar Full-Body Motion Control from Sparse Data and Direction Control using Deep Reinforcement Learning
 
 ## Contributions
 The contributions of this work are as follow: 
@@ -48,26 +46,43 @@ The contributions of this work are as follow:
   
 
 ## 2. Motion Data 
+### Motion captured data
 * We provide our motion data in ```assets/motions``` and ```assets/retargeted```.
   * Motions located in ```assets/motions``` are provided by Composite Motion Learning with Task Control.
   * The blocking/pickup/punch/throw motions located in ```assets/retargeted``` are extracted from the demo provided by Mixamo.
   * Tennis motions shown in the project is not provided due to the commercial license.
   * Motions extracted from Mixamo are retargeted to our skeleton model with the code provided by [ASE](https://github.com/nv-tlabs/ASE). Please refer to an example retargeting script in ```ase/poselib/retarget_motion.py```.
 
-<br/> 
-
 <p align="center">
-  <img src="https://github.com/haaappytoast/22_MS1_Master_Thesis/assets/45995611/e813d22d-3cce-4f6e-a657-f1d9cbd7965c" width="480" height="600">
+  <img src="https://github.com/haaappytoast/22_MS1_Master_Thesis/assets/45995611/e813d22d-3cce-4f6e-a657-f1d9cbd7965c" width="360" height="480">
   <br>
   <em> Motion sequence demo provided by Mixamo. <br/> Block, pick fruits, punch motions are illustrated in the rows from top to bottom.</em>
 </p>
 <br/> 
 
 <p align="center">
-  <img src="https://github.com/haaappytoast/22_MS1_Master_Thesis/assets/45995611/3029a592-7761-41b6-b4c0-f25ac4d42abb" width="480" height="190">
+  <img src="https://github.com/haaappytoast/22_MS1_Master_Thesis/assets/45995611/3029a592-7761-41b6-b4c0-f25ac4d42abb" width="360" height="190">
   <br>
   <em> Example demo of tennis motion retargeted to our model</em>
 </p>
+
+### Real VR user motion dataset
+<p align="center">
+  <img src="https://github.com/haaappytoast/23_MS2_Master_Thesis/assets/45995611/1d92fc1f-fc76-426b-97a8-bb601b0b5f74" width="480" height="160">
+  <br>
+  <em> Overview of collecting VR user motion data</em>
+</p>
+
+  **Data Acquisition from Movement SDK**
+  * Real sensor data of VR headsets and motions of A VR user are extracted using [MovementSDK](https://developer.oculus.com/documentation/unity/move-overview/) and Unity3D.
+
+  **Retargeting process**
+  
+* Same retargeting method used in motion captured data is utilized to transfer the motion of real VR user's motion onto our skeleton model of IsaacGym.
+
+<br/> 
+
+
 
 
 ## 3. Policy Training 
