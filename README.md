@@ -1,13 +1,16 @@
+![Punch_Application (1)](https://github.com/haaappytoast/23_MS2_Master_Thesis/assets/45995611/f7b129a8-4fa9-4757-9dcd-85127c2e4ef8)
+https://github.com/haaappytoast/23_MS2_Master_Thesis/assets/45995611/4d12128e-8a7b-4f69-9e4a-ee88891d9669
 Physics-based 3D Avatar Full-Body Motion Control from Sparse Data and Direction Control using Deep Reinforcement Learning
 
 ## Contributions
 The contributions of this work are as follow: 
-1. Enables a VR user with limited lower-body mobility to control full-body movement of a physics-based 3D avatar
-2. Introduces sparse sensor input reward to realistically control upper body movements of a 3D avatar
+1. Enables a VR user with limited mobility to control a 3D avatar and explore spacious virtual environment
+2. Enables object interaction that satisfies physical laws with a key feature of sparse sensor reward
+
 <br/>
 
 ## Results and Applications
-
+### Visualization result
 <p align="center">
   <img src="https://github.com/haaappytoast/22_MS1_Master_Thesis/assets/45995611/7f4fe98e-7cc2-4608-b7fe-39d40fde4d2c">
   <br>
@@ -20,11 +23,20 @@ The contributions of this work are as follow:
   <em>(Top) Motion sequences of the VR user performing punch motion with direction control. (Bottom) Reconstructed full-body motion of the 3D avatar.</em>
 </p>
 <br/>
+
+### Application
 <p align="center">
   <img src="https://github.com/haaappytoast/22_MS1_Master_Thesis/assets/45995611/72c09f6a-9038-4363-a736-0507f6851825.gif" width="600" height="360">
   <br>
   <em>Blocking a projectile</em>
 </p>
+
+<p align="center">
+  <img src="https://github.com/haaappytoast/23_MS2_Master_Thesis/assets/45995611/d5a853d2-4539-499b-bf9d-60e8eef6990b" width="600" height="360">
+  <br>
+  <em>Punching an object</em>
+</p>
+
 
 <br/><br/><br/>
 
